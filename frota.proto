@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package frota;
+
+// =============================
+// Serviço principal da frota
+// =============================
+service FrotaService {
+
+  // Comunicação bidirecional (streaming):
+  // O veículo envia continuamente suas localizações,
+  // e a central responde com comandos em tempo real.
+  rpc Comunicar(stream Localizacao) returns (stream Comando);
+
+  // Consulta unária:
+  // Retorna uma estimativa de tempo de entrega com base na localização e destino.
+  rpc EstimarEntrega(EntregaRequest) returns (EntregaResponse);
+
+  // Consulta unária:
+  // Retorna a localização atual de um veículo específico.
+  rpc ConsultarVeiculo(VeiculoRequest) returns (Localizacao);
+}
+
+// =============================
+// Estruturas de mensagem
+// =============================
+
+// Localização enviada pelo veículo
+message Localizacao {
+  string veiculo_id = 1;    // Identificador único do veículo
+  double latitude = 2;      // Latitude atual
+  double longitude = 3;     // Longitude atual
+  string timestamp = 4;     // Data/hora do envio (ISO 8601 recomendado)
+  double velocidade = 5;    // Velocidade atual em km/h
+}
+
+// Comando enviado da central para o veículo
+message Comando {
+  string veiculo_id = 1;    // Identificador do veículo destinatário
+  string tipo = 2;          // Tipo do comando (ex: "PARADA", "ALERTA", "REDIRECIONAMENTO")
+  string mensagem = 3;      // Mensagem textual de orientação
+  int32 prioridade = 4;     // Nível de prioridade (1=baixa, 5=alta)
+}
+
+// Requisição para consultar a localização atual de um veículo
+message VeiculoRequest {
+  string veiculo_id = 1;
+}
+
+// Requisição para estimar tempo de entrega
+message EntregaRequest {
+  string veiculo_id = 1;
+  double latitude = 2;      // Ponto de partida (ou posição atual)
+  double longitude = 3;
+  string destino = 4;       // Endereço ou coordenadas de destino
+}
+
+// Resposta com estimativa de entrega
+message EntregaResponse {
+  string tempo_estimado = 1;  // Ex: "15 minutos"
+  string condicoes = 2;       // Ex: "Trânsito leve", "Chuva moderada"
+  string status = 3;          // Ex: "Em rota", "Aguardando início"
+}
