@@ -1,6 +1,6 @@
 
 
-✅ Etapa 7: Testar o sistema
+✅ Testar o sistema
 
 Gere os arquivos Python do .proto:
 
