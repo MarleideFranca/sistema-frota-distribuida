@@ -52,7 +52,7 @@ Durante o desenvolvimento deste projeto, foi possível compreender na prática:
 
 - Como o gRPC facilita a comunicação eficiente e escalável em sistemas distribuídos, refletindo os mesmos princípios de colaboração e integração presentes no trabalho em grupo.
 
-Essas experiências reforçaram não apenas o aprendizado técnico, mas também o entendimento de como a comunicação — entre pessoas e entre sistemas — é fundamental para o sucesso de um projeto.
+Essas experiências reforçaram não apenas o aprendizado técnico, mas também o entendimento de como a comunicação entre pessoas e entre sistemas é fundamental para o sucesso de um projeto.
 
 
 👩‍💻 **Discente:** *Marleide Alves de França*
