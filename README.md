@@ -25,15 +25,23 @@ O relatório técnico completo descrevendo a arquitetura, comunicação e justif
 ⚙️ Como executar o projeto:
 
 1️⃣ Gerar os arquivos Python a partir do .proto
+
+---bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. frota.proto
 
 2️⃣ Executar o servidor
+
+---bash
 python central_server.py
 
 3️⃣ Em outro terminal, executar o cliente veículo
+
+---bash
 python veiculo_client.py
 
 4️⃣ Em outro terminal, executar o cliente monitor
+
+---bash
 python monitor_client.py
 
 ---
