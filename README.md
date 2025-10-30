@@ -51,4 +51,4 @@ Durante o desenvolvimento deste projeto, foi possível compreender na prática:
 Essas experiências reforçaram não apenas o aprendizado técnico, mas também o entendimento de como a comunicação — entre pessoas e entre sistemas — é fundamental para o sucesso de um projeto.
 
 
-👩‍💻 **Autoria:** *Marleide Alves de França*
+👩‍💻 **Discente:** *Marleide Alves de França*
