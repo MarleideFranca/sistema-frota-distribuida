@@ -22,36 +22,21 @@ O relatório técnico completo descrevendo a arquitetura, comunicação e justif
 
 ---
 
-## ✅ Testar o sistema
+⚙️ Como executar o projeto:
 
-### 1️⃣ Gerar os arquivos Python a partir do `.proto`
-
-```bash
+1️⃣ Gerar os arquivos Python a partir do .proto
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. frota.proto
 
-### 2️⃣ Executar o servidor
-
-```bash
+2️⃣ Executar o servidor
 python central_server.py
 
-### 3️⃣ Em outro terminal, executar o cliente veículo
-
-```bash
+3️⃣ Em outro terminal, executar o cliente veículo
 python veiculo_client.py
 
-### 4️⃣ Em outro terminal, executar o cliente monitor
-
-```bash
-
+4️⃣ Em outro terminal, executar o cliente monitor
 python monitor_client.py
 
-🧩 Tecnologias utilizadas
-
-Python 3.x
-
-gRPC 
-
-Protocol Buffers (proto3)
+---
 
 💡 Lições Aprendidas
 
@@ -66,86 +51,4 @@ Durante o desenvolvimento deste projeto, foi possível compreender na prática:
 Essas experiências reforçaram não apenas o aprendizado técnico, mas também o entendimento de como a comunicação — entre pessoas e entre sistemas — é fundamental para o sucesso de um projeto.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+👩‍💻 **Autoria:** *Marleide Alves de França*
